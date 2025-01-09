@@ -1,0 +1,52 @@
+.activity-list {
+    li {
+        display: block;
+        border-bottom: 1px solid $border-color;
+        padding: 20px 0px;
+
+        &:last-child {
+            border: 0px;
+        }
+
+        h4 {
+            margin-bottom: 0px;
+        }
+
+        p {
+            margin-bottom: 0px;
+            color: $body-color;
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 14px;
+            color: $text-muted;
+        }
+    }
+}
+
+.activity-fliter {
+    li {
+        padding: 5px 0px;
+
+        &:first-child {
+            padding-top: 0px;
+        }
+
+        &:last-child {
+            padding-bottom: 0px;
+        }
+    }
+
+    a {
+        color: $body-color;
+        // font-size  : 14px;
+        // font-weight: 500;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: $headings-color;
+        }
+    }
+}

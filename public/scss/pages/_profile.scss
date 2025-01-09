@@ -1,0 +1,289 @@
+.profile-page {
+    margin-bottom: 150px;
+}
+
+.user-info {
+    margin: 15px 0px;
+
+    span {
+        margin-bottom: 5px;
+        display      : inline-block;
+    }
+}
+
+
+.welcome-profile {
+    // background: $primary !important;
+
+    .card-body {
+        // background: $primary !important;
+
+        img {
+            border       : 4px solid $white;
+            border-radius: 100px;
+            width        : 60px;
+        }
+
+        // text-align: center;
+
+        h4 {
+            // color     : $white;
+            margin-top: 10px;
+            font-size : 18px;
+        }
+
+        p {
+            // color          : $white;
+            opacity        : 0.75;
+            // max-width   : 300px;
+            // margin   : 0 auto;
+
+        }
+
+        ul {
+            text-align: left;
+
+            li {
+                padding      : 15px 0px;
+                border-bottom: 1px solid $border-color;
+
+                &:last-child {
+                    border        : 0px;
+                    padding-bottom: 0px;
+                }
+
+                a {
+                    // color      : darken($white, 5%);
+                    display    : flex;
+                    align-items: center;
+                    transition : all 0.25 ease-in-out;
+
+                    span {
+                        // background     : $primary;
+                        padding        : 5px;
+                        border-radius  : 50px;
+                        width          : 30px;
+                        height         : 30px;
+                        display        : inline-flex;
+                        align-items    : center;
+                        justify-content: center;
+                        margin-right   : 10px;
+                        transition     : all 0.25 ease-in-out;
+
+                        &.verified {
+                            background: $success;
+                            color     : $white;
+                        }
+
+                        &.not-verified {
+                            background: $primary;
+                            color     : $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+///// 
+
+// .profile-page {
+//     .settings-menu {
+//         // background   : $primary;
+//         padding         : 20px 0px;
+//         // border-radius: $radius;
+//         margin-top      : 10px;
+//         border-bottom   : 1px solid $border-color;
+
+//         li {
+
+//             &:hover,
+//             &:focus,
+//             &.active {
+//                 a {
+//                     color     : $white;
+//                     background: $primary;
+//                 }
+//             }
+//         }
+
+//         a {
+//             // color       : $white;
+//             // margin-right: 30px;
+//             padding      : 5px 15px;
+//             border-radius: $radius;
+//             font-weight  : 600;
+
+//         }
+//     }
+// }
+
+
+///
+.cover-photo-img {
+    background-image   : url('../images/profile/cover5.png');
+    min-height         : 350px;
+    background-size    : cover;
+    background-position: center;
+}
+
+
+
+
+.profile-btn {
+    position: absolute;
+    right   : 0;
+    top     : -50px;
+}
+
+
+.profile-bio {
+    margin-top: -100px;
+    background: $white;
+    padding   : 10px;
+
+    @include respond("lg") {
+        margin-top: 30px;
+    }
+
+    .user-img {
+        border-radius: 100px;
+        margin-bottom: 20px;
+        max-width    : 150px;
+
+    }
+
+    .username {
+        font-size    : 16px;
+        color        : $text-muted;
+        margin-bottom: 15px;
+    }
+
+    .user-title {
+        font-size  : 22px;
+        line-height: 0px;
+
+        .verified-id {
+            i {
+                display : inline-block;
+                position: relative;
+                top     : -3px;
+            }
+        }
+    }
+
+    .wallet-address {
+        font-weight     : 700;
+        color           : $body-color;
+        margin-bottom   : 20px;
+        // font-size    : 14px;
+    }
+
+    .url {
+        color: $body-color;
+
+        i {
+            margin-right: 10px;
+            position    : relative;
+            top         : -2px;
+            font-size   : 18px;
+
+            color: $headings-color;
+        }
+
+        &:hover {
+            color: $primary;
+
+            i {
+                color: $headings-color;
+            }
+        }
+    }
+
+    .social-url {
+        a {
+            color        : $body-color;
+            font-size    : 18px;
+            margin-right : 20px;
+            margin-bottom: 30px;
+            display      : inline-block;
+        }
+    }
+}
+
+
+.profile-menu {
+    margin       : 20px 0px 30px;
+    display      : flex;
+    border-bottom: 1px solid $border-color;
+
+    @include respond('sm') {
+        display: inline-block;
+    }
+
+    li {
+
+        padding              : 15px 0px;
+        position             : relative;
+        font-weight          : 500;
+        // display           : inline-block;
+
+        // &:last-child {
+        //     border-bottom: 0px;
+        // }
+
+        @include respond('sm') {
+            display: inline-block;
+            padding: 7px 0px;
+        }
+
+        // i {
+        //     font-size      : 18px;
+        //     margin-right   : 10px;
+        //     font-weight    : 700;
+        //     position       : absolute;
+        //     right          : 0px;
+        //     // color       : $dark;
+        //     opacity        : 0;
+        // }
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            a {
+                color     : $headings-color;
+                // opacity: 1;
+            }
+        }
+
+        &.active {
+            i {
+                opacity: 1;
+            }
+        }
+    }
+
+    a {
+        display           : inline-block;
+        margin-right      : 30px;
+        color             : $body-color;
+        // font-weight    : $headings-font-weight;
+        font-size         : 16px;
+        // opacity     : 0.75;
+
+
+    }
+}
+
+
+.social-verify {
+    i {
+        position: relative;
+        top     : -2px;
+    }
+}
+
+.follow-followers {}

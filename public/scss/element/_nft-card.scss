@@ -1,0 +1,272 @@
+.nft-style-one {
+    .loved {
+        position     : absolute;
+        top          : 10px;
+        left         : 10px;
+        background   : #fff;
+        padding      : 3px 17px;
+        border       : 1px solid $border-color;
+        border-radius: 50px;
+        font-weight  : 600;
+
+        i {
+            line-height : 0px;
+            margin-right: 5px;
+            position    : relative;
+            top         : -2px;
+        }
+    }
+
+    .creator {
+        position     : absolute;
+        bottom       : -5px;
+        right        : 20px;
+        border-radius: 100px;
+    }
+
+    .btn {
+        min-width   : 100%;
+        margin      : 5px 5px;
+        // font-size: 13px;
+        padding     : 12px;
+    }
+}
+
+
+.nft-style-two {
+    .loved {
+        position     : absolute;
+        top          : 10px;
+        left         : 10px;
+        background   : #fff;
+        padding      : 3px 17px;
+        border       : 1px solid $border-color;
+        border-radius: 50px;
+        font-weight  : 600;
+
+        i {
+            line-height : 0px;
+            margin-right: 5px;
+            position    : relative;
+            top         : -2px;
+        }
+    }
+
+    .counter {
+        position     : absolute;
+        bottom       : 0;
+        left         : 0;
+        right        : 0;
+        text-align   : center;
+        background   : #fff;
+        box-shadow   : $shadow;
+        max-width    : 120px;
+        margin       : 0 auto;
+        padding      : 5px;
+        border-radius: $radius;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .avatar {
+        border-radius: 100px;
+        width        : 35px;
+    }
+
+    .btn {
+        min-width      : 49%;
+        // margin      : 5px 5px;
+        // font-size: 13px;
+        // padding     : 12px;
+    }
+}
+
+.nft-style-three {
+    .loved {
+        font-weight: 600;
+
+        i {
+            line-height : 0px;
+            margin-right: 5px;
+            position    : relative;
+            top         : -2px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .avatar {
+        border-radius: 100px;
+        width        : 50px;
+        position     : absolute;
+        bottom       : -20px;
+        left         : 15px;
+    }
+}
+
+
+
+.nft-style-four {
+    .loved {
+        position     : absolute;
+        top          : 10px;
+        left         : 10px;
+        background   : #fff;
+        padding      : 3px 17px;
+        border       : 1px solid $border-color;
+        border-radius: 50px;
+        font-weight  : 600;
+
+        i {
+            line-height : 0px;
+            margin-right: 5px;
+            position    : relative;
+            top         : -2px;
+        }
+    }
+
+    .cat {
+        background   : #fff;
+        padding      : 3px 17px;
+        border       : 1px solid $border-color;
+        border-radius: 50px;
+        font-weight  : 600;
+
+        i {
+            line-height : 0px;
+            margin-right: 5px;
+            position    : relative;
+            top         : -2px;
+        }
+    }
+
+    .counter {
+        position     : absolute;
+        bottom       : 15px;
+        left         : 0;
+        right        : 0;
+        text-align   : center;
+        background   : #fff;
+        box-shadow   : $shadow;
+        max-width    : 120px;
+        margin       : 0 auto;
+        padding      : 5px;
+        border-radius: $radius;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .avatar {
+        border-radius: 100px;
+        width        : 40px;
+    }
+
+    .btn {
+        min-width      : 49%;
+        // margin      : 5px 5px;
+        // font-size: 13px;
+        // padding     : 12px;
+    }
+}
+
+
+.nft-style-five {
+    .loved {
+        position     : absolute;
+        top          : 10px;
+        left         : 10px;
+        background   : #fff;
+        padding      : 3px 17px;
+        border       : 1px solid $border-color;
+        border-radius: 50px;
+        font-weight  : 600;
+
+        i {
+            line-height : 0px;
+            margin-right: 5px;
+            position    : relative;
+            top         : -2px;
+        }
+    }
+
+    .bidder {
+        display : flex;
+        position: relative;
+        padding : 10px 0px;
+
+        .bidder-img {
+            img {
+                position: absolute;
+                left    : 10px;
+
+                &.b1 {
+                    left: 5px;
+                }
+
+                &.b2 {
+                    left: 15px;
+                }
+
+                &.b3 {
+                    left: 25px;
+                }
+            }
+        }
+
+        p {
+            margin-bottom: 0px;
+            margin-left  : 70px;
+        }
+    }
+
+    .counter {
+        position     : absolute;
+        bottom       : 15px;
+        left         : 0;
+        right        : 0;
+        text-align   : center;
+        background   : #fff;
+        box-shadow   : $shadow;
+        max-width    : 120px;
+        margin       : 0 auto;
+        padding      : 5px;
+        border-radius: $radius;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .avatar {
+        border-radius: 100px;
+        width        : 30px;
+    }
+
+    .btn {
+        min-width      : 100%;
+        // margin      : 5px 5px;
+        // font-size: 13px;
+        // padding     : 12px;
+    }
+}
+
+.explore-collection {
+    .collection-brand {
+        margin-top: -60px;
+        // z-index   : 999;
+        position  : relative;
+
+        img {
+            max-width    : 70px;
+            border-radius: 100px;
+            margin-bottom: 10px;
+        }
+
+    }
+}

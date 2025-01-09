@@ -1,0 +1,67 @@
+.collection-cover-photo {
+    .cover-intro {
+        padding: 50px 0px 80px;
+    }
+
+    .collection-logo {
+        display: inline-flex;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: $radius;
+        margin-bottom: 20px;
+        img {
+            max-width: 150px;
+            border-radius: $radius;
+        }
+    }
+    .eth-url {
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.72);
+        display: inline-flex;
+        border-radius: $radius;
+        padding: 5px 20px;
+        font-weight: 500;
+        color: $dark;
+        i {
+            margin-left: 10px;
+            line-height: 1.5;
+        }
+    }
+    h2 {
+        margin-top: 30px;
+    }
+    .collector-username {
+        display: flex;
+        align-items: center;
+        img {
+            max-width: 40px;
+            margin-right: 10px;
+            border-radius: 100px;
+        }
+    }
+}
+
+.collector-widget {
+    margin-top: -50px;
+}
+
+.collection-tab-nav {
+    margin: 0px 0px 30px;
+    display: flex;
+    border-bottom: 1px solid $body-color;
+    li {
+        padding: 15px 0px;
+        position: relative;
+        font-weight: 500;
+        a {
+            display: inline-block;
+            margin-right: 30px;
+            color: #62759d;
+            font-size: 16px;
+            cursor: pointer;
+            &.active {
+                color: $primary;
+            }
+        }
+    }
+}

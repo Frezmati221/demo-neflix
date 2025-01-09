@@ -1,0 +1,134 @@
+.pagetree-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+    background: $dark;
+    overflow: hidden;
+
+    &.open {
+        display: block;
+    }
+}
+
+.pagetree-nav {
+    // justify-content:center;
+    
+    ul {
+        display: flex;
+        position: relative;
+      padding-top: 20px;
+      justify-content:center;
+    }
+  
+    li {
+      position: relative;
+      padding: 20px 3px 0 3px;
+      display: inline-flex;
+      align-items:center;
+      flex-direction:column;
+      text-align: center;
+      list-style-type: none;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        width: 50%;
+        height: 20px;
+        border-top: 1px solid #ccc;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        width: 50%;
+        height: 20px;
+        border-top: 1px solid #ccc;
+        left: 50%;
+        right: auto;
+        border-left: 1px solid #ccc;
+      }
+  
+      &:only-child {
+        &::after, &::before {
+          content: '';
+          display: none;
+        }
+  
+        padding-top: 0;
+      }
+  
+      &:first-child::before {
+        border: 0 none;
+      }
+  
+      &:last-child {
+        &::after {
+          border: 0 none;
+        }
+  
+        &::before {
+          border-right: 1px solid #ccc;
+          border-radius: 0 5px 0 0;
+        }
+      }
+  
+      &:first-child::after {
+        border-radius: 5px 0 0 0;
+      }
+    }
+  
+    ul ul::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 1px solid #ccc;
+      width: 0;
+      height: 20px;
+    }
+  
+    li a {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #ccc;
+      font-family: arial, verdana, tahoma;
+      font-size: 11px;
+  
+      &:hover {
+        color: #000;
+        background: #c8e4f8;
+        border: 1px solid #94a0b4;
+  
+        + ul {
+          li {
+            a {
+              color: #000;
+              background: #c8e4f8;
+              border: 1px solid #94a0b4;
+            }
+  
+            &::after, &::before {
+              content: '';
+              border-color: #94a0b4;
+            }
+          }
+  
+          &::before, ul::before {
+            content: '';
+            border-color: #94a0b4;
+          }
+        }
+      }
+    }
+  }

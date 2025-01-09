@@ -1,0 +1,18 @@
+
+import NftThree from "../components/widget/NftThree";
+import SlickMap from './../components/elements/SlickMap';
+const Test = () => {
+
+
+    return (
+        <>
+            {/* <NftThree /> */}
+
+            <SlickMap />
+
+
+        </>
+    );
+};
+
+export default Test;
