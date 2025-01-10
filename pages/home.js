@@ -210,7 +210,7 @@ const ButtonTabs = styled.button`
   padding: 8px 16px;
   border-radius: 20px;
   border: none;
-  background: ${(props) => (props.$active ? "#0066FF" : "transparent")};
+  background: ${(props) => (props.$active ? "#0077b6" : "transparent")};
   color: ${(props) => (props.$active ? "#fff" : "rgb(98, 117, 157)")};
   font-weight: 500;
   cursor: pointer;
