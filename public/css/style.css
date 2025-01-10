@@ -2842,11 +2842,11 @@ fieldset:disabled .btn {
   background-color: #0077b6;
   border-color: #0077b6;
 }
-.btn-primary:hover {
+/* .btn-primary:hover {
   color: #000;
   background-color: #5e85f6;
   border-color: #547df5;
-}
+} */
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
   color: #000;
