@@ -158,14 +158,13 @@ const SlideDescription = styled.p`
 const NavButton = styled.button`
   position: absolute;
   top: 45%;
-  ${(props) => props.$direction}: 1rem;
+  ${(props) => props.$direction}: -1.5rem;
   transform: translateY(-50%);
   width: 3rem;
   height: 3rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
+  background: rgba(21, 44, 91, 0.5);
   color: white;
   display: flex;
   align-items: center;
@@ -173,17 +172,20 @@ const NavButton = styled.button`
   cursor: pointer;
   transition: all 0.2s;
   z-index: 10;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
   &:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(21, 44, 91);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.5);
   }
 `;
-
 const ScrollContainer = styled.div`
   width: 100%;
   overflow-x: auto;
@@ -209,15 +211,17 @@ const ButtonTabs = styled.button`
   border-radius: 20px;
   border: none;
   background: ${(props) => (props.$active ? "#0066FF" : "transparent")};
-  color: ${(props) => (props.$active ? "#fff" : "#666")};
-  font-size: 14px;
+  color: ${(props) => (props.$active ? "#fff" : "rgb(98, 117, 157)")};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
   border: 1px solid #ccc;
+
   &:hover {
-    background: ${(props) => (props.$active ? "#0052CC" : "#f5f5f5")};
+    color: ${(props) => (props.$active ? "#fff" : "rgb(98, 117, 157)")};
   }
 
   &:focus {
@@ -259,6 +263,9 @@ const Th = styled.th`
 const Td = styled.td`
   padding: 16px;
   border-bottom: 1px solid #e2e8f0;
+  font-family: "DM Sans", sans-serif;
+  color: rgb(98, 117, 157);
+  font-size: 16px;
 `;
 
 const SortButton = styled.button`
@@ -610,7 +617,7 @@ export default function NFTEbookMarketplace() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    if (currentIndex < slides.length - 1) {
+    if (currentIndex < slides.length - 4) {
       setCurrentIndex((prev) => prev + 1);
     }
   };
@@ -665,17 +672,17 @@ export default function NFTEbookMarketplace() {
                           onClick={prevSlide}
                           aria-label="Previous slide"
                         >
-                          <ChevronLeft size={24} />
+                          <ChevronLeft size={48} />
                         </NavButton>
                       )}
 
-                      {currentIndex < slides.length - 1 && (
+                      {currentIndex < slides.length - 4 && (
                         <NavButton
                           $direction="right"
                           onClick={nextSlide}
                           aria-label="Next slide"
                         >
-                          <ChevronRight size={24} />
+                          <ChevronRight size={48} />
                         </NavButton>
                       )}
                     </CarouselContainer>
@@ -694,6 +701,7 @@ export default function NFTEbookMarketplace() {
                       ))}
                     </Nav>
                   </ScrollContainer>
+
                   <TableContainer className="card">
                     <Table>
                       <thead>
@@ -708,7 +716,7 @@ export default function NFTEbookMarketplace() {
                       </thead>
                       <tbody>
                         {collections.map((collection) => (
-                          <Tr key={collection.id}>
+                          <Tr key={collection.id} style={{ cursor: "pointer" }}>
                             <Td>{collection.id}</Td>
                             <Td>
                               <CollectionCell>
